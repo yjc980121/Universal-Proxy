@@ -33,7 +33,7 @@ const server = http.createServer(async (req, res) => {
     }
 
     // Fetch target content
-    const response = await fetch(targetUrl, { headers, redirect: 'follow' });
+    const response = await fetch(targetUrl, { headers, redirect: 'follow', compress: false});
 
     // Set CORS headers
     res.setHeader('Access-Control-Allow-Origin', '*');
