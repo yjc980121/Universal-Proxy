@@ -280,10 +280,10 @@ async function createProxyRequest(options, res, redirectCount = 0) {
         'content-length'     // 因为内容可能被修改，所以需要重新计算长度
       ];
       
-      headersToRemove.forEach(header => {
-        delete responseHeaders[header];
-        delete responseHeaders[header.toLowerCase()];
-      });
+      // headersToRemove.forEach(header => {
+      //  delete responseHeaders[header];
+      //  delete responseHeaders[header.toLowerCase()];
+      // });
 
       // 设置响应头
       res.writeHead(proxyResponse.statusCode || 500, responseHeaders);
