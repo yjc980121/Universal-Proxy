@@ -172,9 +172,9 @@ const server = http.createServer(async (req, res) => {
     const responseHeaders = {};
     response.headers.forEach((value, name) => {
       // 过滤掉可能影响传输的头部
-      if (!['content-encoding', 'transfer-encoding', 'content-length'].includes(name.toLowerCase())) {
-        responseHeaders[name] = value;
-      }
+      // if (!['content-encoding', 'transfer-encoding', 'content-length'].includes(name.toLowerCase())) {
+      //   responseHeaders[name] = value;
+      // }
     });
     
     // 添加 CORS 和服务器标识头
